@@ -520,3 +520,55 @@ body {
   #side-nav a.active {
     color: #b74b4b;
   }
+
+  .skills {
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  
+  .skill-cloud {
+    width: 90%;
+    max-width: 1000px;
+    height: 400px;
+    margin: 3rem auto;
+    position: relative;
+    overflow: hidden;
+    background: #161616;
+    border: 3px solid #b74b4b;
+    border-radius: 2rem;
+  }
+  
+  .bubble {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: floatBubble 10s infinite linear alternate;
+  }
+  
+  .bubble img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Randomize starting positions */
+  .skill-cloud .bubble:nth-child(1) { top: 10%; left: 20%; animation-duration: 12s; }
+  .skill-cloud .bubble:nth-child(2) { top: 30%; left: 50%; animation-duration: 15s; }
+  .skill-cloud .bubble:nth-child(3) { top: 50%; left: 70%; animation-duration: 18s; }
+  .skill-cloud .bubble:nth-child(4) { top: 60%; left: 30%; animation-duration: 11s; }
+  .skill-cloud .bubble:nth-child(5) { top: 20%; left: 80%; animation-duration: 14s; }
+  .skill-cloud .bubble:nth-child(6) { top: 70%; left: 10%; animation-duration: 13s; }
+  .skill-cloud .bubble:nth-child(7) { top: 40%; left: 40%; animation-duration: 16s; }
+  .skill-cloud .bubble:nth-child(8) { top: 60%; left: 60%; animation-duration: 10s; }
+  .skill-cloud .bubble:nth-child(9) { top: 80%; left: 50%; animation-duration: 17s; }
+  .skill-cloud .bubble:nth-child(10) { top: 25%; left: 60%; animation-duration: 12s; }
+  .skill-cloud .bubble:nth-child(11) { top: 45%; left: 20%; animation-duration: 19s; }
+  .skill-cloud .bubble:nth-child(12) { top: 35%; left: 10%; animation-duration: 19s; }
+  
+  @keyframes floatBubble {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(20px, -20px) rotate(180deg); }
+    100% { transform: translate(-20px, 20px) rotate(360deg); }
+  }
