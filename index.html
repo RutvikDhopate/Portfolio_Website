@@ -18,7 +18,8 @@
                 <a href="#projects">Projects</a>
                 <a href="#education">Education</a>
                 <a href="#contact">Contact</a>
-              </nav>
+            </nav>
+            <button id="theme-toggle" class="btn toggle-btn">Toggle Mode</button>
         </header>
         <section class="home" id="home">
             <div class="home-img">
@@ -293,6 +294,25 @@
             }
           
             document.addEventListener("DOMContentLoaded", type);
+        </script>
+        <script>
+            const toggleButton = document.getElementById('theme-toggle');
+            let isDark = true;
+            
+            toggleButton.addEventListener('click', () => {
+              if (isDark) {
+                document.documentElement.style.setProperty('--bg-color', '#f9f9f9'); /* light cream */
+                document.documentElement.style.setProperty('--text-color', '#161616'); /* almost black text */
+                document.documentElement.style.setProperty('--accent-color', '#0077b6'); /* sea blue */
+                document.documentElement.style.setProperty('--secondary-bg', '#ffffff'); /* white cards */
+              } else {
+                document.documentElement.style.setProperty('--bg-color', 'black');
+                document.documentElement.style.setProperty('--text-color', 'white');
+                document.documentElement.style.setProperty('--accent-color', '#b74b4b');
+                document.documentElement.style.setProperty('--secondary-bg', '#161616');
+              }
+              isDark = !isDark;
+            });
         </script>
     </body>
 </html>
